@@ -1,0 +1,3 @@
+module "wp" {
+  source = "./modules"
+}
