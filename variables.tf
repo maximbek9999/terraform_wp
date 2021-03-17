@@ -1,1 +1,4 @@
-1. What is the problem
+variable "region_name" {
+  default = "us-east-1"
+}
+

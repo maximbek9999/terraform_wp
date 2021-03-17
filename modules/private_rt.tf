@@ -10,17 +10,17 @@ route {
   Name = "private_rt"
   }
 }
-resource "aws_route_table_association" "private_subnet_a" {
-  subnet_id      = aws_subnet.private_subnet_a.id
+resource "aws_route_table_association" "priv_sub_a" {
+  subnet_id      = aws_subnet.priv_sub_a.id
   route_table_id = aws_route_table.private_rt.id
 }
 
-resource "aws_route_table_association" "private_subnet_b" {
-  subnet_id      = aws_subnet.private_subnet_b.id
+resource "aws_route_table_association" "priv_sub_b" {
+  subnet_id      = aws_subnet.priv_sub_b.id
   route_table_id = aws_route_table.private_rt.id
 }
 
-resource "aws_route_table_association" "private_subnet_c" {
-  subnet_id      = aws_subnet.private_subnet_c.id
+resource "aws_route_table_association" "priv_sub_c" {
+  subnet_id      = aws_subnet.priv_sub_c.id
   route_table_id = aws_route_table.private_rt.id
 }
