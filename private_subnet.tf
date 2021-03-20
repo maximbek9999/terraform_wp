@@ -1,4 +1,4 @@
-resource "aws_subnet" "priv_sub_a" {
+resource "aws_subnet" "priv_sub_" {
   vpc_id     = aws_vpc.wp_vpc.id
   cidr_block = "10.0.11.0/24"
 
