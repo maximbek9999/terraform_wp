@@ -17,7 +17,16 @@ resource "aws_instance" "bastion" {
     Name = "bastion_ec2"
   }
 }
-
-
-
-
+  provisioner "remote-exec" {
+    inline = [
+      "sudo ssh-keygen",
+  "/home/ec2-user/.ssh/id_rsa",
+  "passphrase",
+  "passphrase"]
+    connection {
+      type        = "ssh"
+      host        = self.public_ip
+      user        = "ec2-user"
+      private_key = file("./laptop-pem.pem") 
+    }
+  }
